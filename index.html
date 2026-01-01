@@ -69,7 +69,18 @@ File Manager → Android → media → com.whatsapp → .Statuses
 <h3>📥 Instagram Status / Reel</h3>
 <input type="text" placeholder="Paste Instagram link">
 <br>
-<button onclick="alert('Download feature coming soon')">Download</button>
+<button onclick="downloadIG()">Download</button>
+
+<script>
+function downloadIG(){
+  var link = document.querySelector("input").value;
+  if(link === ""){
+    alert("Instagram link paste করুন");
+    return;
+  }
+  window.open("https://snapinsta.app/?url=" + encodeURIComponent(link), "_blank");
+}
+</script>
 <p>(Only Public Content)</p>
 </div>
 
